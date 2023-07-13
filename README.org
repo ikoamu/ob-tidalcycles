@@ -1,4 +1,20 @@
 * ob-tidalcycles
-** Install
-** Configure
-** Examples
+org-babel functions for tidalcycles evaluation
+: #+BEGIN_SRC tidal
+: once $ sound "bd"
+: #+END_SRC
+: 
+: #+RESULTS:
+: : tidal>
+
+** requirement
+tidal-mode must be already installed.
+
+** setup
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/path/to/ob-tidalcycles")
+(require 'ob-tidalcycles)
+(org-babel-do-load-languages
+   'org-babel-load-languages
+   '((tidalcycles . t)))
+#+END_SRC
